@@ -2,7 +2,7 @@ import os
 import re
 import pandas as pd
 
-folder_path = "/mnt/datafive/tj/samples/BLAST_OUT/Banthracis"
+folder_path = "path/to/BLAST_files"
 
 file_data = []
 
@@ -43,7 +43,7 @@ for filename in file_list:
 
 df = pd.DataFrame(file_data)
 
-output_file = os.path.join(folder_path, "Bacillus_anthracis_extracted_hits_table.tab")
+output_file = os.path.join(folder_path, "reads_extracted_hits_table.tab")
 df.to_csv(output_file, sep="\t", index=False)
 
 print("Table saved as extracted_hits_table.tab")
